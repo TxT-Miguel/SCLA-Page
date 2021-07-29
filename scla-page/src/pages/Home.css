@@ -25,13 +25,9 @@ h1 {
 }
 
 .vertical-center {
-  display: flex;
-  /* justify-content: center; */
-  /* height: 100% */
-  /* display: flex; */
-  /* justify-content: space-evenly; */
-  align-items: center;
+  border-color: red;
 }
+
 
 
 
