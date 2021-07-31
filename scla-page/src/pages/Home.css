@@ -6,15 +6,8 @@
 
 #jumbotron-title {
   padding: 2rem 1rem;
-  /* margin-bottom: 2rem; */
-  /* background-color: #e9ecef; */
-  background-color: black;
+  background-color: rgb(0, 120, 185);
   border-radius: 0.3rem;
-  /* color: white; */
-}
-
-h1 {
-  color: white
 }
 
 #jumbotron-description {
@@ -28,11 +21,12 @@ h1 {
   border-color: red;
 }
 
-
-
-
 .overlay-background {
   height: 100vh;
   width: 100%;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../util/img/hack-day-SCLA-2021.png') no-repeat center/cover;
+}
+
+section {
+  background-color: rgba(211, 215, 217);
 }

@@ -36,7 +36,7 @@ const Home = () => {
 
       <section>
         <Container>
-          <h2 className="text-center my-5">Meet the Teams!</h2>
+          <h2 className="text-center py-5">Meet the Teams!</h2>
           {TEAM_INFO.map((i) => (
             <Row>
               <TeamCards
