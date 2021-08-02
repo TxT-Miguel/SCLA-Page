@@ -1,12 +1,16 @@
 import React, { Fragment } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 // images
 import TXT_flyer from "../util/img/2021_DemoDay_Flyer 2.jpg";
+import YOUTUBE_logo from "../util/img/youtube-logo.jpg";
+import LINKEDIN_logo from "../util/img/linkedin.png";
+import CLASSY_logo from "../util/img/classy-logo.png";
+import EVENTBRITE_logo from "../util/img/eventbrite-logo.png";
 
 // components
 import TeamCards from "../components/TeamCards";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
 
 // css
 import "./Home.css";
@@ -22,13 +26,89 @@ const Home = () => {
 
         <Container>
           <Row className="text-center">
-            <Col>
-              <img src={TXT_flyer} alt="SCLA Demo Day flyer" width="500" />
+            <Col md={5}>
+              <img
+                className="header-flyer-image"
+                src={TXT_flyer}
+                alt="SCLA Demo Day flyer"
+              />
             </Col>
-            <Col className="my-auto">
-              <Button className="mb-5">Sign up Here!</Button>
-              <br />
-              <Button>Donate Here!</Button>
+            <Col md={{ span: 5, offset: 2 }} className="d-flex flex-column">
+              <Card className="my-auto">
+                <Card.Body>
+                  <Card.Title>Where</Card.Title>
+                  <Card.Text>
+                    <img
+                      className="header-stream-images"
+                      src={YOUTUBE_logo}
+                      alt="youtube"
+                    />
+                    <img
+                      className="header-stream-images"
+                      src={LINKEDIN_logo}
+                      alt="Linkedin"
+                    />
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+
+              <Row>
+                <Col md={6}>
+                  <Card>
+                    <Card.Title>Sign up here!</Card.Title>
+                    <Card.Text>
+                      <a
+                        href="https://www.eventbrite.com/e/txt-presents-demo-day-2021-tickets-164046376127"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          className="header-link-images"
+                          src={EVENTBRITE_logo}
+                          alt="event-brite sign up"
+                        />
+                      </a>
+                    </Card.Text>
+                  </Card>
+                </Col>
+                <Col md={6}>
+                  <Card>
+                    <Card.Title>Donate Here!</Card.Title>
+                    <Card.Text>
+                      <a
+                        href="https://www.classy.org/campaign/urban-txt-teens-exploring-technology/c266418"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          className="header-link-images"
+                          src={CLASSY_logo}
+                          alt="donation page"
+                        />
+                      </a>
+                    </Card.Text>
+                  </Card>
+                </Col>
+              </Row>
+
+              {/* <Card className="my-auto">
+                <Card.Body>
+                  <Row>
+                    <Col md={6}>
+                      <span className="header-buttons-text">Sign up Here!</span>
+                      <img
+                        src={EVENTBRITE_logo}
+                        alt="event-brite sign up"
+                        width="250"
+                      />
+                    </Col>
+                    <Col md={6}>
+                      <span className="header-buttons-text">Donate Here!</span>
+                      <img src={CLASSY_logo} alt="donation page" width="250" />
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card> */}
             </Col>
           </Row>
         </Container>

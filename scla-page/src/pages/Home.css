@@ -22,11 +22,30 @@
 }
 
 .overlay-background {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../util/img/hack-day-SCLA-2021.png') no-repeat center/cover;
 }
 
 section {
   background-color: rgba(211, 215, 217);
+}
+
+.header-buttons-text {
+  font-size: 23px;
+}
+
+.header-flyer-image {
+  max-width: 90%;
+  height: auto;
+}
+
+.header-stream-images {
+  max-width: 50%;
+  height: auto;
+}
+
+.header-link-images {
+  max-width: 80%;
+  height: auto;
 }
