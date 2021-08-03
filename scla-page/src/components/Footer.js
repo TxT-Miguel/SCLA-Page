@@ -3,7 +3,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import { Instagram, Twitter, Facebook, Linkedin } from "react-bootstrap-icons";
 
 // image
-import TXT_logo from "../util/img/logo_TXT_color_sm_2014.02.05.jpg";
+import TXT_logo from "../util/img/txt/logo_TXT_color_sm_2014.02.05.jpg";
 
 // css
 import "./Footer.css";

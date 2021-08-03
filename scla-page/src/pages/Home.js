@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 // images
-import TXT_flyer from "../util/img/2021_DemoDay_Flyer 2.jpg";
-import YOUTUBE_logo from "../util/img/youtube-logo.jpg";
-import LINKEDIN_logo from "../util/img/linkedin.png";
-import CLASSY_logo from "../util/img/classy-logo.png";
-import EVENTBRITE_logo from "../util/img/eventbrite-logo.png";
+import TXT_flyer from "../util/img/txt/2021_DemoDay_Flyer 2.jpg";
+import YOUTUBE_logo from "../util/img/streaming/youtube-logo.jpg";
+import LINKEDIN_logo from "../util/img/streaming/linkedin.png";
+import CLASSY_logo from "../util/img/misc/classy-logo.png";
+import EVENTBRITE_logo from "../util/img/misc/eventbrite-logo.png";
 
 // components
 import TeamCards from "../components/TeamCards";
@@ -90,25 +90,6 @@ const Home = () => {
                   </Card>
                 </Col>
               </Row>
-
-              {/* <Card className="my-auto">
-                <Card.Body>
-                  <Row>
-                    <Col md={6}>
-                      <span className="header-buttons-text">Sign up Here!</span>
-                      <img
-                        src={EVENTBRITE_logo}
-                        alt="event-brite sign up"
-                        width="250"
-                      />
-                    </Col>
-                    <Col md={6}>
-                      <span className="header-buttons-text">Donate Here!</span>
-                      <img src={CLASSY_logo} alt="donation page" width="250" />
-                    </Col>
-                  </Row>
-                </Card.Body>
-              </Card> */}
             </Col>
           </Row>
         </Container>
@@ -117,16 +98,18 @@ const Home = () => {
       <section>
         <Container>
           <h2 className="text-center py-5">Meet the Teams!</h2>
-          {TEAM_INFO.map((i) => (
-            <Row>
-              <TeamCards
-                id={i.id}
-                logo={i.teamLogo}
-                name={i.teamName}
-                buttonLink={i.teamDonateLink}
-              />
-            </Row>
-          ))}
+          <Row>
+            {TEAM_INFO.map((i) => (
+              <Col md={4}>
+                <TeamCards
+                  id={i.id}
+                  logo={i.teamLogo}
+                  name={i.teamName}
+                  buttonLink={i.teamDonateLink}
+                />
+              </Col>
+            ))}
+          </Row>
         </Container>
       </section>
 
