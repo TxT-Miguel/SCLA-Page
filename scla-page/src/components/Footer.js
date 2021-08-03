@@ -3,7 +3,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import { Instagram, Twitter, Facebook, Linkedin } from "react-bootstrap-icons";
 
 // image
-import TXT_logo from "../util/img/logo_TXT_black_lg_2014.02.05.png";
+import TXT_logo from "../util/img/logo_TXT_color_sm_2014.02.05.jpg";
 
 // css
 import "./Footer.css";
@@ -14,8 +14,10 @@ const Footer = () => {
       <Container>
         <Row>
           <Col className="text-center my-auto">
-            <img src={TXT_logo} alt="Urban TXT logo" width="150" />
+            <img className="footer-logo" src={TXT_logo} alt="Urban TXT logo" />
           </Col>
+
+          {/* Social Media column */}
           <Col className="text-center">
             <h3>Follow Us</h3>
             <div>
@@ -63,6 +65,8 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
+
+          {/* Quick Links Column */}
           <Col className="text-center">
             <h3>Quick Links</h3>
             <ul className="quick-links">
