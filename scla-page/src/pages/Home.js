@@ -102,10 +102,7 @@ const Home = () => {
             {TEAM_INFO.map((i) => (
               <Col md={4}>
                 <TeamCards
-                  id={i.id}
-                  logo={i.teamLogo}
-                  name={i.teamName}
-                  buttonLink={i.teamDonateLink}
+                  team={i}
                 />
               </Col>
             ))}
