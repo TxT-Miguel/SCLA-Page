@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { useParams } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 // images
@@ -9,7 +10,6 @@ import CLASSY_logo from "../util/img/misc/classy-logo.png";
 import EVENTBRITE_logo from "../util/img/misc/eventbrite-logo.png";
 
 // components
-// import TeamCards from "../components/TeamCards";
 import Footer from "../components/Footer";
 
 // css
@@ -18,6 +18,9 @@ import TEAM_INFO from "../util/TEAM_INFO";
 import SingleTeamCard from "../components/SingleTeamCard";
 
 const Home = () => {
+  // use values 0-8 as indexes for each team. anything above it will not generate
+  let { id } = useParams();
+
   return (
     <Fragment>
       <div className="overlay-background">
@@ -34,7 +37,10 @@ const Home = () => {
                 alt="SCLA Demo Day flyer"
               />
             </Col>
-            <Col md={{ span: 5, offset: 2 }} className="d-flex flex-column my-3">
+            <Col
+              md={{ span: 5, offset: 2 }}
+              className="d-flex flex-column my-3"
+            >
               <Card className="my-auto">
                 <Card.Body>
                   <Card.Title>Where</Card.Title>
@@ -54,7 +60,7 @@ const Home = () => {
               </Card>
 
               <Row>
-                <Col md={6} >
+                <Col md={6}>
                   <Card>
                     <Card.Title>Sign up here!</Card.Title>
                     <Card.Text>
@@ -98,16 +104,17 @@ const Home = () => {
 
       <section>
         <Container>
-          <h2 className="text-center py-5">Team Highlight</h2>
+          {id < 9 || Number.isNaN(id) ? (
+            <h2 className="text-center py-5">Team Highlight</h2>
+          ) : (
+            ""
+          )}
           <Row>
-            <SingleTeamCard oneTeam={TEAM_INFO[0]} />
-            {/* {TEAM_INFO.map((i) => (
-              <Col md={4}>
-                <TeamCards
-                  team={i}
-                />
-              </Col>
-            ))} */}
+            {id < 9 || Number.isNaN(id) ? (
+              <SingleTeamCard oneTeam={TEAM_INFO[id]} />
+            ) : (
+              <h1 className="text-center">Team not found</h1>
+            )}
           </Row>
         </Container>
       </section>

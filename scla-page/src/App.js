@@ -12,11 +12,11 @@ const App = () => {
   return (
     <div>
       <Switch>
-        <Route path="/home">
+        <Route path="/home/:id">
           <Home />
         </Route>
         <Route path="/">
-          <Redirect to="/home" />
+          <Redirect to="/home/0" />
         </Route>
       </Switch>
     </div>
