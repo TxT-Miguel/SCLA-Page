@@ -33,8 +33,8 @@ const TeamCards = (props) => {
           <img className="img-modal" src={currentTeam.teamPoster} alt={currentTeam.alt} />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary">Donate</Button>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="success">Donate</Button>
+          <Button variant="danger" onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>
@@ -44,10 +44,10 @@ const TeamCards = (props) => {
         <Card.Header className="text-center">{props.team.teamName}</Card.Header>
         <Card.Img variant="top" src={props.team.teamLogo} />
         <Card.Body className="text-center">
-          <Button variant="secondary" onClick={() => handleShow(props.team.id)}>
-            More Information
+          <Button variant="info" onClick={() => handleShow(props.team.id)}>
+            Expand
           </Button>
-          <Button variant="primary" href={props.team.teamDonateLink}>
+          <Button variant="success" href={props.team.teamDonateLink}>
             Donate
           </Button>
         </Card.Body>
