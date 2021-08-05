@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 // css
 import "./Home.css";
 import TEAM_INFO from "../util/TEAM_INFO";
+import SingleTeamCard from "../components/SingleTeamCard";
 
 const Home = () => {
   return (
@@ -97,15 +98,16 @@ const Home = () => {
 
       <section>
         <Container>
-          <h2 className="text-center py-5">Meet the Teams!</h2>
+          <h2 className="text-center py-5">Team Highlight</h2>
           <Row>
-            {TEAM_INFO.map((i) => (
+            <SingleTeamCard oneTeam={TEAM_INFO[0]} />
+            {/* {TEAM_INFO.map((i) => (
               <Col md={4}>
                 <TeamCards
                   team={i}
                 />
               </Col>
-            ))}
+            ))} */}
           </Row>
         </Container>
       </section>

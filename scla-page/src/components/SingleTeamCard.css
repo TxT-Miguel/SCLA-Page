@@ -1,0 +1,13 @@
+.poster-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-corners {
+    border-radius: 20px;
+}
+
+.header-size {
+    font-weight: bold;
+    font-size: 30px;
+}
