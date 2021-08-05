@@ -1,24 +1,58 @@
-import React from "react";
+import React, { useState, Fragment } from "react";
 
-import { Card, Row, Col, Button } from "react-bootstrap";
+import { Card, Button, Modal } from "react-bootstrap";
 
-import './TeamCards.css';
+import "./TeamCards.css";
+import TEAM_INFO from "../util/TEAM_INFO";
 
 const TeamCards = (props) => {
+  const [currentTeam, setCurrentTeam] = useState(0);
+
+  // Modal Properties
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleShow = (chooseTeam) => {
+    const filterTeam = TEAM_INFO.filter((i) => i.id === chooseTeam)[0];
+    setCurrentTeam(filterTeam);
+    setShowModal(true);
+  };
+
   return (
-    <Card className="my-3 background-colors">
-      <Card.Body>
-        <Row className="text-center">
-          <Col>
-            <img src={props.logo} alt="apple" width="100" />
-          </Col>
-          <Col className="my-auto">{props.name}</Col>
-          <Col className="my-auto">
-            <Button href={props.buttonLink}>Donate Here</Button>
-          </Col>
-        </Row>
-      </Card.Body>
-    </Card>
+    <Fragment>
+      {/* Modal for individual teams */}
+      <Modal
+        size="lg"
+        show={showModal}
+        onHide={handleClose}
+        centered
+      >
+        <Modal.Header>
+          <Modal.Title>{currentTeam.teamName}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img className="img-modal" src={currentTeam.teamPoster} alt={currentTeam.alt} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="success">Donate</Button>
+          <Button variant="danger" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Card className="my-4" style={{ width: "18rem" }} key={props.team.id}>
+        <Card.Header className="text-center">{props.team.teamName}</Card.Header>
+        <Card.Img variant="top" src={props.team.teamLogo} />
+        <Card.Body className="text-center">
+          <Button variant="info" onClick={() => handleShow(props.team.id)}>
+            Expand
+          </Button>
+          <Button variant="success" href={props.team.teamDonateLink}>
+            Donate
+          </Button>
+        </Card.Body>
+      </Card>
+    </Fragment>
   );
 };
 
