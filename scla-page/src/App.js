@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 // css
 import "./App.css";
+import "./Fonts.css";
 
 // pages
 import Home from "./pages/Home";

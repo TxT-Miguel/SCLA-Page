@@ -13,12 +13,13 @@ const Footer = () => {
     <footer>
       <Container>
         <Row>
-          <Col className="text-center my-auto">
+          {/* TXT Logo Column */}
+          <Col sm={12} md={4} className="text-center my-3">
             <img className="footer-logo" src={TXT_logo} alt="Urban TXT logo" />
           </Col>
 
           {/* Social Media column */}
-          <Col className="text-center">
+          <Col sm={12} md={4} className="text-center my-3">
             <h3>Follow Us</h3>
             <div>
               <ul className="social-media">
@@ -67,7 +68,7 @@ const Footer = () => {
           </Col>
 
           {/* Quick Links Column */}
-          <Col className="text-center">
+          <Col sm={12} md={4} className="text-center my-3">
             <h3>Quick Links</h3>
             <ul className="quick-links">
               <li>

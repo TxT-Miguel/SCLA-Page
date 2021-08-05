@@ -9,7 +9,7 @@ import CLASSY_logo from "../util/img/misc/classy-logo.png";
 import EVENTBRITE_logo from "../util/img/misc/eventbrite-logo.png";
 
 // components
-import TeamCards from "../components/TeamCards";
+// import TeamCards from "../components/TeamCards";
 import Footer from "../components/Footer";
 
 // css
@@ -26,7 +26,7 @@ const Home = () => {
         </div>
 
         <Container>
-          <Row className="text-center">
+          <Row className="text-center my-3">
             <Col md={5}>
               <img
                 className="header-flyer-image"
@@ -34,7 +34,7 @@ const Home = () => {
                 alt="SCLA Demo Day flyer"
               />
             </Col>
-            <Col md={{ span: 5, offset: 2 }} className="d-flex flex-column">
+            <Col md={{ span: 5, offset: 2 }} className="d-flex flex-column my-3">
               <Card className="my-auto">
                 <Card.Body>
                   <Card.Title>Where</Card.Title>
@@ -54,7 +54,7 @@ const Home = () => {
               </Card>
 
               <Row>
-                <Col md={6}>
+                <Col md={6} >
                   <Card>
                     <Card.Title>Sign up here!</Card.Title>
                     <Card.Text>
