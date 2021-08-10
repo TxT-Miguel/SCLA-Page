@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.classy.org/campaign/urban-txt-teens-exploring-technology/c266418"
+                  href="https://www.classy.org/campaign/scla-demo-day-2021/c348783"
                   target="_blank"
                   rel="noreferrer"
                 >
