@@ -33,6 +33,7 @@ section {
 .header-flyer-image {
   max-width: 90%;
   height: auto;
+  border-radius: 10px;
 }
 
 .header-stream-images {
